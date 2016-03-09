@@ -35,3 +35,6 @@
 // 取消显示
 - (void)dismiss:(BOOL)animated;
 ```
+
+##许可
+**WKProgressHUD** is released under [__MIT License__](https://github.com/WelkinXie/WKProgressHUD/blob/master/LICENSE).
