@@ -9,6 +9,10 @@
 ![()](http://7xneqd.com1.z0.glb.clouddn.com/messagehud.png)
 
 ##使用方法
+**pod 'WKProgressHUD'**
+
+或下载源码并把"WKProgressHUD"目录拖拽到项目中。
+
 ![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithtext.png)
 
 	[WKProgressHUD showInView:self.view withText:@"加载中" animated:YES];
