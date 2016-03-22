@@ -12,7 +12,7 @@
 
 static NSMutableArray *HUDs;
 
-@interface WKProgressHUD () <WKProgressHUDComponent>
+@interface WKProgressHUD ()
 
 @end
 
@@ -103,6 +103,18 @@ static NSMutableArray *HUDs;
     else {
         [self.selfView addSubview:self];
     }
+}
+
+- (void)addIndicator {
+    
+}
+
+- (void)addText {
+    
+}
+
+- (void)compositeElements {
+    
 }
 
 @end

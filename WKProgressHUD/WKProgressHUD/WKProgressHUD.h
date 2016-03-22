@@ -32,11 +32,6 @@
 // 取消
 - (void)dismiss:(BOOL)animated;
 
-@end
-
-@protocol WKProgressHUDComponent <NSObject>
-
-@optional
 - (void)addIndicator;
 - (void)addText;
 - (void)compositeElements;
