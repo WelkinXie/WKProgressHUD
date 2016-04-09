@@ -1,4 +1,42 @@
 #WKProgressHUD
+
+Simply write one line to use HUD.
+
+##Effect
+![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithtext.png)
+![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithouttext.png)
+![()](http://7xneqd.com1.z0.glb.clouddn.com/messagehud.png)
+
+##Usage
+**pod 'WKProgressHUD'** and **import "WKProgressHUD.h"**
+
+![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithtext.png)
+
+	[WKProgressHUD showInView:self.view withText:@"加载中" animated:YES];
+
+![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithouttext.png)
+
+	[WKProgressHUD showInView:self.view withText:@"" animated:YES];
+
+![()](http://7xneqd.com1.z0.glb.clouddn.com/messagehud.png)
+
+    [WKProgressHUD popMessage:@"网络异常" inView:self.view duration:1.5 animated:YES];
+
+###Dismiss：
+
+```
++ (void)dismissInView:(UIView *)view animated:(BOOL)animated;
++ (void)dismissAll:(BOOL)animated;
+- (void)dismiss:(BOOL)animated;
+```
+
+##License
+**WKProgressHUD** is released under [__MIT License__](https://github.com/WelkinXie/WKProgressHUD/blob/master/LICENSE).
+
+--
+
+# 中文说明
+
 一行代码实现提示消息。
 
 最轻巧，使用最简单的HUD。
