@@ -20,7 +20,7 @@ static NSMutableArray *HUDs;
 
 @implementation WKProgressHUD
 
-+ (void)load {
++ (void)initialize {
     HUDs = [NSMutableArray array];
 }
 
@@ -97,9 +97,7 @@ static NSMutableArray *HUDs;
         [UIView animateWithDuration:0.3 animations:^{
             self.alpha = 1;
         } completion:^(BOOL finished) {
-            if (completion != NULL) {
-                completion();
-            }
+            !completion ?: completion();
         }];
     }
     else {

@@ -20,8 +20,7 @@
 - (IBAction)waitingHUDWIthText:(UIButton *)sender {
     WKProgressHUD *hud = [WKProgressHUD showInView:self.view withText:@"加载中" animated:YES];
     
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 2ull * NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [hud dismiss:YES];
     });
 }
@@ -29,8 +28,7 @@
 - (IBAction)waitingHUDWithoutText:(UIButton *)sender {
     WKProgressHUD *hud = [WKProgressHUD showInView:self.view withText:nil animated:YES];
     
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 2ull * NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [hud dismiss:YES];
     });
 }

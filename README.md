@@ -8,7 +8,7 @@ Simply write one line to use HUD.
 ![()](http://7xneqd.com1.z0.glb.clouddn.com/messagehud.png)
 
 ##Usage
-**pod 'WKProgressHUD'** and **import "WKProgressHUD.h"**
+import "WKProgressHUD.h"
 
 ![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithtext.png)
 
@@ -47,9 +47,7 @@ Simply write one line to use HUD.
 ![()](http://7xneqd.com1.z0.glb.clouddn.com/messagehud.png)
 
 ##使用方法
-**pod 'WKProgressHUD'**
-
-或下载源码并把"WKProgressHUD"目录拖拽到项目中。
+import "WKProgressHUD.h"
 
 ![()](http://7xneqd.com1.z0.glb.clouddn.com/hudwithtext.png)
 
