@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WKProgressHUD : UIView
-@property (nonatomic, weak) UIView *selfView;
+@property (nonatomic, weak) UIView *view;
 
 @property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) UIActivityIndicatorView *indicatorView;

@@ -54,7 +54,7 @@
     }
     self.backView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.78];
     self.backView.layer.cornerRadius = 10;
-    self.backView.center = CGPointMake(CGRectGetMidX(self.selfView.frame), CGRectGetMidY(self.selfView.frame));
+    self.backView.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame));
     [self.backView addSubview:self.indicatorView];
 }
 

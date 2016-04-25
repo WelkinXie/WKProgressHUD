@@ -31,7 +31,7 @@
 
 - (void)compositeElements {
     self.backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.textLabel.frame) + 35, CGRectGetHeight(self.textLabel.frame) + 35)];
-    self.backView.center = CGPointMake(CGRectGetMidX(self.selfView.frame), CGRectGetMidY(self.selfView.frame));
+    self.backView.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame));
     self.backView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.78];
     self.backView.layer.cornerRadius = 10;
     

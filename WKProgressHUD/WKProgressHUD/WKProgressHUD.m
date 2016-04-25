@@ -26,9 +26,9 @@ static NSMutableArray *HUDs;
 
 + (instancetype)showInView:(UIView *)view withText:(NSString *)text animated:(BOOL)animated {
     WKProgressHUD *HUD = [[WKWaitingProgressHUD alloc] initWithFrame:view.bounds];
-    HUD.selfView = view;
+    HUD.view = view;
     HUD.text = text;
-    
+     
     [HUD addIndicator];
     [HUD addText];
     [HUD compositeElements];
@@ -40,7 +40,7 @@ static NSMutableArray *HUDs;
 
 + (instancetype)popMessage:(NSString *)text inView:(UIView *)view duration:(NSTimeInterval)duration animated:(BOOL)animated {
     WKProgressHUD *HUD = [[WKMessageProgressHUD alloc] initWithFrame:view.bounds];
-    HUD.selfView = view;
+    HUD.view = view;
     HUD.text = text;
     
     [HUD addText];
@@ -57,7 +57,7 @@ static NSMutableArray *HUDs;
 
 + (void)dismissInView:(UIView *)view animated:(BOOL)animated {
     for (WKProgressHUD *HUD in HUDs) {
-        if ([HUD.selfView isEqual:view]) {
+        if ([HUD.view isEqual:view]) {
             [HUD dismiss:animated];
         }
     }
@@ -92,7 +92,7 @@ static NSMutableArray *HUDs;
     
     if (animated) {
         self.alpha = 0;
-        [self.selfView addSubview:self];
+        [self.view addSubview:self];
         
         [UIView animateWithDuration:0.3 animations:^{
             self.alpha = 1;
@@ -103,8 +103,12 @@ static NSMutableArray *HUDs;
         }];
     }
     else {
-        [self.selfView addSubview:self];
+        [self.view addSubview:self];
     }
+}
+
+- (void)layoutSubviews {
+    self.backView.center = CGPointMake(CGRectGetWidth(self.view.frame) / 2, CGRectGetHeight(self.view.frame) / 2 - CGRectGetMinY(self.view.frame));
 }
 
 - (void)addIndicator {
